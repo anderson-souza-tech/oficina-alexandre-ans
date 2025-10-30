@@ -1,0 +1,77 @@
+/* ===== Paleta ===== */
+:root{
+  --preto:#0F0F10;
+  --cinza-escuro:#1E1F22;
+  --cinza:#2B2D31;
+  --cinza-claro:#ECECEC;
+  --vermelho:#E50914;
+}
+body{
+  margin:0;
+  font:16px/1.6 Arial,Helvetica,sans-serif;
+  color:var(--cinza-claro);
+  background:linear-gradient(180deg,var(--preto),var(--cinza-escuro));
+}
+
+#principal{max-width:980px;margin:0 auto;background:var(--cinza);box-shadow:0 10px 30px rgba(0,0,0,.35);}
+.hero{display:block;width:100%;max-height:380px;object-fit:cover;border-bottom:4px solid var(--vermelho);filter:saturate(1.05) contrast(1.05);}
+#menu{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;justify-content:center;background:linear-gradient(0deg,var(--preto),#191a1c);border-bottom:2px solid var(--vermelho);padding:14px 18px;}
+#menu a{color:#cfd3d7;text-decoration:none;text-transform:uppercase;font-weight:700;letter-spacing:.5px;padding:8px 10px;border-radius:6px;transition:transform .15s ease,background-color .15s ease,color .15s ease;}
+#menu a:hover{color:#fff;background:rgba(229,9,20,.12);transform:translateY(-1px);}
+#menu a.ativo{color:#fff;background:var(--vermelho);}
+#conteudo{background:#202226;padding:22px 22px 28px;border-left:1px solid #2f3237;border-right:1px solid #2f3237;}
+
+h1{margin:6px 0 14px;font-size:1.45rem;color:#fff;border-left:6px solid var(--vermelho);padding-left:10px;}
+p{color:#dfe3e7;margin:0 0 14px;}
+#rodape{text-align:center;background:#141517;color:#b8bcc1;padding:14px 10px 18px;border-top:2px solid var(--vermelho);}
+#rodape p{margin:0;font-size:.92rem;}
+.img-campanha{display:block;width:100%;height:auto;border:4px solid var(--vermelho);box-shadow:0 6px 20px rgba(0,0,0,.35);border-radius:6px;}
+
+#conteudo a{color:var(--vermelho);font-weight:700;text-decoration:none;border-bottom:1px solid transparent;}
+#conteudo a:hover{border-bottom:1px solid var(--vermelho);}
+input,textarea,button{width:100%;max-width:400px;padding:10px;margin:5px 0;border:none;border-radius:4px;}
+button{background:var(--vermelho);color:#fff;font-weight:bold;cursor:pointer;transition:.2s;}
+button:hover{background:#ff3344;}
+
+
+/* Area do Maps*/
+.map-wrap{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 4px solid var(--vermelho);
+  box-shadow: 0 6px 20px rgba(0,0,0,.35);
+  background:#111;
+}
+.map-wrap iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(15%) contrast(1.05);
+}
+
+/* Botão maps combinando com o tema */
+.btn-maps{
+  display:inline-block;
+  background: var(--preto);
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:8px;
+  transition:.2s;
+}
+.btn-maps:hover{ background:#1E1F22; }
+
+/*===== Formulário ===== */
+
+#contatoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 450px;
+}
