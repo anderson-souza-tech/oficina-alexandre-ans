@@ -1,72 +1,300 @@
-/* ===== Paleta de cores ===== */
+/* ===== Paleta de cores (tema) ============================================= */
 :root{
-  --preto:#0F0F10;
-  --cinza-escuro:#1E1F22;
-  --cinza:#2B2D31;
-  --cinza-claro:#ECECEC;
-  --vermelho:#E50914;
+  --preto:        #0F0F10;  /* fundo mais escuro / gradiente inicial            */
+  --cinza-escuro: #1E1F22;  /* fundo secundário / gradiente final                */
+  --cinza:        #2B2D31;  /* áreas internas (ex.: container #principal)        */
+  --cinza-claro:  #ECECEC;  /* textos claros sobre fundo escuro                  */
+  --vermelho:     #E50914;  /* cor de destaque (bordas, links ativos, botões)    */
 }
+
+/* ===== Base tipográfica e plano de fundo ================================== */
 body{
-  margin:0;
-  font:16px/1.6 Arial,Helvetica,sans-serif;
-  color:var(--cinza-claro);
-  background:linear-gradient(180deg,var(--preto),var(--cinza-escuro));
+  margin: 0;
+  font: 16px/1.6 Arial, Helvetica, sans-serif; /* tamanho e altura de linha padrão */
+  color: var(--cinza-claro);                    /* cor de texto padrão              */
+  background: linear-gradient(180deg, var(--preto), var(--cinza-escuro)); /* bg */
 }
 
-#principal{max-width:980px;margin:0 auto;background:var(--cinza);box-shadow:0 10px 30px rgba(0,0,0,.35);}
-.hero{display:block;width:100%;max-height:380px;object-fit:cover;border-bottom:4px solid var(--vermelho);filter:saturate(1.05) contrast(1.05);}
-#menu{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;justify-content:center;background:linear-gradient(0deg,var(--preto),#191a1c);border-bottom:2px solid var(--vermelho);padding:14px 18px;}
-#menu a{color:#cfd3d7;text-decoration:none;text-transform:uppercase;font-weight:700;letter-spacing:.5px;padding:8px 10px;border-radius:6px;transition:transform .15s ease,background-color .15s ease,color .15s ease;}
-#menu a:hover{color:#fff;background:rgba(229,9,20,.12);transform:translateY(-1px);}
-#menu a.ativo{color:#fff;background:var(--vermelho);}
-#conteudo{background:#202226;padding:22px 22px 28px;border-left:1px solid #2f3237;border-right:1px solid #2f3237;}
+/* ===== Container principal (limite de largura e sombra) ==================== */
+#principal{
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--cinza);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
 
-h1{margin:6px 0 14px;font-size:1.45rem;color:#fff;border-left:6px solid var(--vermelho);padding-left:10px;}
-p{color:#dfe3e7;margin:0 0 14px;}
-#rodape{text-align:center;background:#141517;color:#b8bcc1;padding:14px 10px 18px;border-top:2px solid var(--vermelho);}
-#rodape p{margin:0;font-size:.92rem;}
-.img-campanha{display:block;width:100%;height:auto;border:4px solid var(--vermelho);box-shadow:0 6px 20px rgba(0,0,0,.35);border-radius:6px;}
+/* ===== Faixa “hero” (imagem topo) ========================================= */
+.hero{
+  display: block;
+  width: 100%;
+  max-height: 380px;                 /* ajuste aqui se quiser hero mais alta/baixa */
+  object-fit: cover;
+  border-bottom: 4px solid var(--vermelho);
+  filter: saturate(1.05) contrast(1.05);
+}
 
-#conteudo a{color:var(--vermelho);font-weight:700;text-decoration:none;border-bottom:1px solid transparent;}
-#conteudo a:hover{border-bottom:1px solid var(--vermelho);}
-input,textarea,button{width:100%;max-width:400px;padding:10px;margin:5px 0;border:none;border-radius:4px;}
-button{background:var(--vermelho);color:#fff;font-weight:bold;cursor:pointer;transition:.2s;}
-button:hover{background:#ff3344;}
+/* ===== Menu principal ====================================================== */
+#menu{
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, var(--preto), #191a1c);
+  border-bottom: 2px solid var(--vermelho);
+  padding: 14px 18px;
+}
+#menu a{
+  color: #cfd3d7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .5px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: transform .15s ease,
+              background-color .15s ease,
+              color .15s ease;
+}
+#menu a:hover{
+  color: #fff;
+  background: rgba(229,9,20,.12);
+  transform: translateY(-1px);
+}
+#menu a.ativo{
+  color: #fff;
+  background: var(--vermelho); /* link ativo do menu */
+}
 
+/* ===== Área de conteúdo ==================================================== */
+#conteudo{
+  background: #202226;
+  padding: 22px 22px 28px;
+  border-left: 1px solid #2f3237;
+  border-right: 1px solid #2f3237;
+}
 
-/* Area do Maps*/
-.map-wrap{
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  overflow: hidden;
-  border-radius: 10px;
+/* ===== Títulos e parágrafos =============================================== */
+h1{
+  margin: 6px 0 14px;
+  font-size: 1.45rem;
+  color: #fff;
+  border-left: 6px solid var(--vermelho);
+  padding-left: 10px;
+}
+p{
+  color: #dfe3e7;
+  margin: 0 0 14px;
+}
+
+/* ===== Rodapé ============================================================== */
+#rodape{
+  text-align: center;
+  background: #141517;
+  color: #b8bcc1;
+  padding: 14px 10px 18px;
+  border-top: 2px solid var(--vermelho);
+}
+#rodape p{
+  margin: 0;
+  font-size: .92rem;
+}
+
+/* ===== Imagens padrão da campanha/galeria ================================= */
+/* OBS: altura e disposição lado a lado são controladas pela .galeria (seção da galeria) */
+.img-campanha{
+  display: block;
+  width: 100%;
+  height: auto;                          /* altere aqui se quiser altura fixa */
   border: 4px solid var(--vermelho);
   box-shadow: 0 6px 20px rgba(0,0,0,.35);
-  background:#111;
+  border-radius: 6px;
 }
-.map-wrap iframe{
-  position: absolute;
-  inset: 0;
+
+/* ===== Links dentro do conteúdo =========================================== */
+#conteudo a{
+  color: var(--vermelho);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;  /* aparece no :hover */
+}
+#conteudo a:hover{
+  border-bottom: 1px solid var(--vermelho);
+}
+
+/* ===== Formulários e botões =============================================== */
+input, textarea, button{
   width: 100%;
-  height: 100%;
-  border: 0;
-  filter: grayscale(15%) contrast(1.05);
+  max-width: 400px;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+}
+button{
+  background: var(--vermelho);           /* cor do botão */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .2s;      /* animação suave ao passar o mouse */
+}
+button:hover{
+  background: #ff3344;                   /* cor do botão no hover */
 }
 
-/* Botão maps combinando com o tema */
-.btn-maps{
-  display:inline-block;
-  background: var(--preto);
-  color:#fff;
-  font-weight:700;
-  text-decoration:none;
-  padding:10px 14px;
-  border-radius:8px;
-  transition:.2s;
+/* ===== [Somente Galeria] – layout lado a lado com quebra automática ======= */
+/* Coloque as imagens .img-campanha dentro de <div class="galeria"> */
+.galeria{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* nº de colunas automático */
+  gap: 14px;                                                   /* espaço entre as imagens   */
+  margin: 16px 0 22px;
 }
-.btn-maps:hover{ background:#1E1F22; }
+.galeria .img-campanha{
+  height: 220px;     /* altura uniforme dos cards; remova se preferir altura livre */
+  object-fit: cover; /* preenche o card e recorta o excesso de forma elegante      */
+}
 
+/* ========================================================================== */
+/* ===== Paleta de cores (tema principal) =================================== */
+/* ========================================================================== */
+:root{
+  --preto:        #0F0F10;  /* fundo mais escuro / gradiente inicial            */
+  --cinza-escuro: #1E1F22;  /* fundo secundário / gradiente final                */
+  --cinza:        #2B2D31;  /* áreas internas (ex.: container #principal)        */
+  --cinza-claro:  #ECECEC;  /* textos claros sobre fundo escuro                  */
+  --vermelho:     #E50914;  /* cor de destaque (bordas, links ativos, botões)    */
+}
+
+/* ========================================================================== */
+/* ===== Corpo e tipografia ================================================ */
+/* ========================================================================== */
+body{
+  margin: 0;
+  font: 16px/1.6 Arial, Helvetica, sans-serif;
+  color: var(--cinza-claro);
+  background: linear-gradient(180deg, var(--preto), var(--cinza-escuro));
+}
+
+/* ========================================================================== */
+/* ===== Container principal =============================================== */
+/* ========================================================================== */
+#principal{
+  max-width: 980px;          /* 🔧 EDITAR AQUI: largura máxima do site */
+  margin: 0 auto;
+  background: var(--cinza);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* ========================================================================== */
+/* ===== Faixa hero (imagem topo) ========================================== */
+/* ========================================================================== */
+.hero{
+  display: block;
+  width: 100%;
+  max-height: 380px;         /* 🔧 EDITAR AQUI: altura da imagem principal */
+  object-fit: cover;
+  border-bottom: 4px solid var(--vermelho);
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* ========================================================================== */
+/* ===== Menu principal ==================================================== */
+/* ========================================================================== */
+#menu{
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, var(--preto), #191a1c);
+  border-bottom: 2px solid var(--vermelho);
+  padding: 14px 18px;
+}
+#menu a{
+  color: #cfd3d7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .5px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: transform .15s ease, background-color .15s ease, color .15s ease;
+}
+#menu a:hover{
+  color: #fff;
+  background: rgba(229,9,20,.12);
+  transform: translateY(-1px);
+}
+#menu a.ativo{
+  color: #fff;
+  background: var(--vermelho); /* 🔧 EDITAR AQUI: cor do menu ativo */
+}
+
+/* ========================================================================== */
+/* ===== Conteúdo principal ================================================ */
+/* ========================================================================== */
+#conteudo{
+  background: #202226;
+  padding: 22px 22px 28px;   /* 🔧 EDITAR AQUI: espaçamento interno da área */
+  border-left: 1px solid #2f3237;
+  border-right: 1px solid #2f3237;
+}
+
+/* ========================================================================== */
+/* ===== Títulos e textos ================================================== */
+/* ========================================================================== */
+h1{
+  margin: 6px 0 14px;
+  font-size: 1.45rem;        /* 🔧 EDITAR AQUI: tamanho do título principal */
+  color: #fff;
+  border-left: 6px solid var(--vermelho);
+  padding-left: 10px;
+}
+p{
+  color: #dfe3e7;
+  margin: 0 0 14px;
+}
+
+/* ========================================================================== */
+/* ===== Rodapé ============================================================ */
+/* ========================================================================== */
+#rodape{
+  text-align: center;
+  background: #141517;
+  color: #b8bcc1;
+  padding: 14px 10px 18px;
+  border-top: 2px solid var(--vermelho);
+}
+#rodape p{
+  margin: 0;
+  font-size: .92rem;
+}
+
+/* ========================================================================== */
+/* ===== Imagens gerais (ex.: campanhas) =================================== */
+/* ========================================================================== */
+.img-campanha{
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 4px solid var(--vermelho);
+  box-shadow: 0 6px 20px rgba(0,0,0,.35);
+  border-radius: 6px;
+}
+
+/* ========================================================================== */
+/* ===== Links dentro do conteúdo ========================================== */
+/* ========================================================================== */
+#conteudo a{
+  color: var(--vermelho);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+#conteudo a:hover{
+  border-bottom: 1px solid var(--vermelho);
+}
 /*===== Formulário ===== */
 
 #contatoForm {
