@@ -1,81 +1,153 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/anderson-souza-tech/anderson-souza-tech/main/banner-github.png" alt="Banner - Anderson Souza" width="100%">
-</p>
+# README – ANS Restauração Automotiva
 
-<h1 align="center">👋 Olá, eu sou o Anderson Souza</h1>
-
-<p align="center">
-  💻 <strong>Analista de Suporte N2 | Pentest | Segurança da Informação</strong><br>
-  🔐 Apaixonado por Cibersegurança, Automação e Desenvolvimento Web.<br>
-  ☁️ Explorando Linux, Cloud, DevSecOps e Desenvolvimento Full Stack.
-</p>
+Site estático simples e responsivo para apresentar a ANS Restauração Automotiva: **Home**, **Sobre**, **Galeria** e **Contato**.
 
 ---
 
-### 🚀 Sobre mim
-- 🎯 Atualmente focado em **Segurança da Informação** e **Pentest**  
-- 🧠 Estudando **Desenvolvimento Web (HTML, CSS, JS, PHP, Python e MySQL)**  
-- 🧩 Experiência com **Suporte N2, Redes, Servidores e Infraestrutura Linux**  
-- 🧰 Projetos principais:
-  - 🔍 **VulnScanner 3.0** – Ferramenta completa de varredura de vulnerabilidades
-  - 🧱 **Monitor de Vulnerabilidades** – Painel Flask com Fail2Ban e VirusTotal
-  - 🧑‍🔧 **Oficina ANS** – Site institucional responsivo com Formspree e GitHub Pages
+## 🌐 Acesse o site
+➡️ https://anderson29-nsconsultoria.github.io/oficina-alexandre-ans/
+
+## 📦 Estrutura
+
+```
+/
+├─ css/
+│  └─ style.css
+├─ imagens/
+│  ├─ capa.jpeg
+│  ├─ imagem1.jpeg … imagemN.jpeg
+├─ index.html
+├─ sobre.html
+├─ galeria.html
+├─ contato.html
+└─ script.js
+```
 
 ---
 
-### 🛠️ Tecnologias e Ferramentas
-<div align="center">
+## ▶️ Como visualizar localmente
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Kali Linux](https://img.shields.io/badge/Kali%20Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)
-![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
-![VSCode](https://img.shields.io/badge/VS%20Code-0078d7?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+- Abra qualquer `.html` no navegador **ou**
+- Use a extensão **Live Server** no VS Code (clique em “Go Live”).
 
+---
+
+## 🎨 Tema e paleta (CSS)
+
+No arquivo `css/style.css`, todas as cores do tema estão centralizadas no `:root`:
+
+```css
+:root{
+  --preto:#0F0F10;
+  --cinza-escuro:#1E1F22;
+  --cinza:#2B2D31;
+  --cinza-claro:#ECECEC;
+  --vermelho:#E50914;  /* Cor de destaque (links, bordas e botões) */
+}
+```
+
+> **Dica:** altere apenas as variáveis para mudar a identidade visual do site.
+
+---
+
+## 🧱 Seções principais do CSS (onde editar)
+
+O `style.css` está comentado e dividido por blocos. Procure pelos marcadores:
+
+- `/* ===== Paleta de cores (tema) ===== */`  
+- `/* ===== Faixa hero (imagem topo) ===== */` – altura/recorte da imagem principal  
+- `/* ===== Menu principal ===== */` – links e estado ativo  
+- `/* ===== Área de conteúdo ===== */` – padding e bordas internas  
+- `/* ===== Galeria de imagens (lado a lado) ===== */` – **nova seção**, controla linhas/colunas  
+  - Edite:
+    ```css
+    .galeria{
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* largura mínima dos cards */
+      gap: 14px;                                                  /* espaçamento */
+    }
+    .galeria .img-campanha{
+      height: 220px;   /* altura uniforme dos cards */
+      object-fit: cover;
+    }
+    ```
+- `/* ===== Formulário de Contato (layout original restaurado) ===== */`  
+  - Mantém **nome** e **telefone** lado a lado; **mensagem** e **botão** abaixo:
+    ```css
+    #contatoForm{
+      display:flex; flex-wrap:wrap; gap:10px; max-width:450px;
+    }
+    #contatoForm input[type="text"],
+    #contatoForm input[type="tel"]{ width:calc(50% - 5px); }
+    #contatoForm textarea{ width:100%; min-height:80px; }
+    #contatoForm button{ width:100%; }
+    ```
+
+---
+
+## 🖼️ Galeria – como adicionar imagens
+
+No `galeria.html`, adicione novas imagens **dentro** do contêiner `.galeria`:
+
+```html
+<div class="galeria">
+  <img class="img-campanha" src="imagens/imagem5.jpeg" alt="Descrição da foto" loading="lazy">
+  <!-- Repita quantas precisar -->
 </div>
+```
+
+A grade se reorganiza sozinha (quebra linha automaticamente).
 
 ---
 
-### 📊 GitHub Stats
-<div align="center">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=anderson-souza-tech&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anderson-souza-tech&layout=compact&langs_count=7&theme=radical"/>
-</div>
+## 📨 Contato – formulário
+
+O layout do formulário no `contato.html` foi **preservado exatamente como o original** (campos Nome/Telefone lado a lado; Mensagem e Botão abaixo).  
+Para mudar apenas textos/placeholders, edite o HTML. Para mudar cores, use `--vermelho` no CSS.
 
 ---
 
-### 🌟 Projetos em Destaque
-📦 [**VulnScanner 3.0**](https://github.com/anderson-souza-tech/VulnScanner-3.0)  
-🔹 Sistema de varredura e monitoramento de vulnerabilidades em Flask com interface web.  
+## 🗺️ Mapa
 
-🌐 [**Oficina Alexandre ANS**](https://github.com/anderson-souza-tech/oficina-alexandre-ans)  
-🔹 Site institucional moderno e responsivo desenvolvido com HTML, CSS e JS.  
-
-💼 [**Portfólio Futurista**](https://github.com/anderson-souza-tech/portfolio)  
-🔹 Portfólio interativo com animações, modo escuro e suporte multilíngue.
+O bloco de mapa usa `.map-wrap` com proporção 16:9 e borda no tema. Para trocar o endereço, atualize o `src` do `iframe` no `contato.html`.
 
 ---
 
-### 🌐 Conecte-se comigo
-<p align="center">
-  <a href="https://www.linkedin.com/in/andersouza-ti" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
-  </a>
-  <a href="mailto:anderson.souza@nsconsultoria.cloud">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white">
-  </a>
-  <a href="https://anderson-souza-tech.github.io/portfolio/" target="_blank">
-    <img src="https://img.shields.io/badge/🌐%20Portfólio-000000?style=for-the-badge">
-  </a>
-</p>
+## ♿ Acessibilidade e SEO rápidos
+
+- Use `alt` descritivo nas imagens (principalmente na galeria).
+- Mantenha um `<h1>` único por página.
+- Inclua `<meta name="description">` (já adicionado como exemplo no `galeria.html`).
 
 ---
 
-<p align="center">
-  ⚡ “A segurança da informação não é um destino — é uma jornada contínua de aprendizado e evolução.”
-</p>
+## 🚀 Publicação (GitHub Pages)
+
+1. Faça **commit/push** para o repositório.
+2. No GitHub: **Settings → Pages → Deploy from a branch** → `main` → `/ (root)`.
+3. Acesse a URL gerada.
+
+---
+
+## 🧰 Fluxo de commit sugerido
+
+```bash
+git status
+git add css/style.css galeria.html contato.html
+git commit -m "Galeria responsiva + formulário preservado + comentários no CSS"
+git push origin main
+```
+
+---
+
+## ✅ Checklist de manutenção
+
+- [ ] Adicione novas imagens em `imagens/` e **otimize** o tamanho (≤ 200–300 KB se possível).  
+- [ ] Preencha `alt` das imagens.  
+- [ ] Evite alterar estilos fora dos blocos comentados.  
+- [ ] Teste em mobile (larguras < 400px).
+
+---
+
+## 🗒️ Changelog (exemplo)
+
+- **2025-11-04** – Galeria responsiva com CSS Grid; formulário restaurado; comentários e organização do `style.css`.
