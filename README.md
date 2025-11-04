@@ -1,92 +1,81 @@
-# 🛠️ ANS – Restauração Automotiva
+<p align="center">
+  <img src="https://raw.githubusercontent.com/anderson-souza-tech/anderson-souza-tech/main/banner-github.png" alt="Banner - Anderson Souza" width="100%">
+</p>
 
-Site institucional simples desenvolvido em **HTML5, CSS3 e JavaScript**, com integração ao **Formspree** para envio de mensagens e **Google Maps** com localização da oficina.  
+<h1 align="center">👋 Olá, eu sou o Anderson Souza</h1>
 
----
-
-## 🌐 Acesse o site
-➡️ https://anderson29-nsconsultoria.github.io/oficina-alexandre-ans/
-
----
-
-## 🧱 Estrutura do projeto
-
-```
-.
-├── index.html                # Página inicial
-├── sobre.html                # Página institucional
-├── galeria.html              # Galeria de fotos
-├── contato.html              # Formulário + mapa
-│
-├── css/
-│   └── style.css             # Estilo principal
-│
-├── js/
-│   └── script.js             # Envio AJAX do formulário
-│
-└── imagens/
-    ├── capa.jpeg
-    ├── exemplo1.jpeg
-    ├── exemplo2.jpeg
-    ├── exemplo3.jpeg
-    └── exemplo4.jpeg
-```
+<p align="center">
+  💻 <strong>Analista de Suporte N2 | Pentest | Segurança da Informação</strong><br>
+  🔐 Apaixonado por Cibersegurança, Automação e Desenvolvimento Web.<br>
+  ☁️ Explorando Linux, Cloud, DevSecOps e Desenvolvimento Full Stack.
+</p>
 
 ---
 
-## 📬 Formulário de Contato
-- Integração via **Formspree**  
-- Endpoint configurado: `https://formspree.io/f/xzzkgwkn`  
-- Retorno de sucesso/erro exibido **na mesma página**, sem redirecionamento  
-
-### Exemplo de campos:
-```
-Nome
-Telefone
-Mensagem
-```
+### 🚀 Sobre mim
+- 🎯 Atualmente focado em **Segurança da Informação** e **Pentest**  
+- 🧠 Estudando **Desenvolvimento Web (HTML, CSS, JS, PHP, Python e MySQL)**  
+- 🧩 Experiência com **Suporte N2, Redes, Servidores e Infraestrutura Linux**  
+- 🧰 Projetos principais:
+  - 🔍 **VulnScanner 3.0** – Ferramenta completa de varredura de vulnerabilidades
+  - 🧱 **Monitor de Vulnerabilidades** – Painel Flask com Fail2Ban e VirusTotal
+  - 🧑‍🔧 **Oficina ANS** – Site institucional responsivo com Formspree e GitHub Pages
 
 ---
 
-## 🗺️ Localização
-Google Maps incorporado com o endereço da oficina:  
-**Rua Danilo Eduardo Rios Ramos, 510 – Jardim São José I – São José dos Campos/SP**
+### 🛠️ Tecnologias e Ferramentas
+<div align="center">
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Kali Linux](https://img.shields.io/badge/Kali%20Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)
+![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+![VSCode](https://img.shields.io/badge/VS%20Code-0078d7?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+</div>
 
 ---
 
-## 🎨 Paleta de cores
-- 🔴 **Vermelho**: #E50914  
-- ⚫ **Preto**: #0F0F10  
-- ⚪ **Cinza claro**: #ECECEC  
-- 🌑 **Cinza escuro**: #1E1F22  
+### 📊 GitHub Stats
+<div align="center">
+  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=anderson-souza-tech&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anderson-souza-tech&layout=compact&langs_count=7&theme=radical"/>
+</div>
 
 ---
 
-## 🚀 Como publicar no GitHub Pages
-1. Vá em **Settings → Pages**  
-2. Em **Branch**, selecione `main` e `/ (root)`  
-3. Clique em **Save**  
-4. Após alguns minutos, seu site estará online.
+### 🌟 Projetos em Destaque
+📦 [**VulnScanner 3.0**](https://github.com/anderson-souza-tech/VulnScanner-3.0)  
+🔹 Sistema de varredura e monitoramento de vulnerabilidades em Flask com interface web.  
+
+🌐 [**Oficina Alexandre ANS**](https://github.com/anderson-souza-tech/oficina-alexandre-ans)  
+🔹 Site institucional moderno e responsivo desenvolvido com HTML, CSS e JS.  
+
+💼 [**Portfólio Futurista**](https://github.com/anderson-souza-tech/portfolio)  
+🔹 Portfólio interativo com animações, modo escuro e suporte multilíngue.
 
 ---
 
-## 💾 Comandos úteis
-```bash
-# Enviar alterações
-git add .
-git commit -m "atualização do site"
-git push
-
-# Atualizar repositório remoto
-git pull
-```
-
----
-
-## 👨‍💻 Autor
-**Anderson Souza**  
-GitHub: https://github.com/anderson29-nsconsultoria • Formspree: https://formspree.io  
+### 🌐 Conecte-se comigo
+<p align="center">
+  <a href="https://www.linkedin.com/in/andersouza-ti" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+  </a>
+  <a href="mailto:anderson.souza@nsconsultoria.cloud">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+  </a>
+  <a href="https://anderson-souza-tech.github.io/portfolio/" target="_blank">
+    <img src="https://img.shields.io/badge/🌐%20Portfólio-000000?style=for-the-badge">
+  </a>
+</p>
 
 ---
 
-© 2025 **Anderson Tech** — Todos os direitos reservados.
+<p align="center">
+  ⚡ “A segurança da informação não é um destino — é uma jornada contínua de aprendizado e evolução.”
+</p>
