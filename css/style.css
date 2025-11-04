@@ -1,4 +1,4 @@
-/* ===== Paleta ===== */
+/* ===== Paleta de cores ===== */
 :root{
   --preto:#0F0F10;
   --cinza-escuro:#1E1F22;
@@ -75,3 +75,20 @@ button:hover{background:#ff3344;}
   gap: 10px;
   max-width: 450px;
 }
+
+/* ===== Galeria (apenas esta área) ===== */
+.galeria{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;                 /* espaço entre as imagens */
+  margin: 16px 0 22px;
+}
+
+/* usa sua .img-campanha sem mudar o restante do site */
+.galeria .img-campanha{
+  width: 100%;
+  height: 220px;             /* dá altura uniforme aos cards */
+  object-fit: cover;         /* corta só o excesso mantendo o enquadramento bonito */
+}
+
+
