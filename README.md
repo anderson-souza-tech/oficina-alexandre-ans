@@ -1,92 +1,51 @@
-# 🛠️ ANS – Restauração Automotiva
+# ANS — Restauração Automotiva
 
-Site institucional simples desenvolvido em **HTML5, CSS3 e JavaScript**, com integração ao **Formspree** para envio de mensagens e **Google Maps** com localização da oficina.  
+Site estático e responsivo da ANS: **Home**, **Sobre**, **Galeria** e **Contato**.
 
----
+## 🔗 Site (GitHub Pages)
+Acesse: https://anderson-souza-tech.github.io/oficina-alexandre-ans/
 
-## 🌐 Acesse o site
-➡️ https://anderson29-nsconsultoria.github.io/oficina-alexandre-ans/
+## 📁 Estrutura
+/
+├─ css/style.css
+├─ js/includes.js # inclui header/footer
+├─ js/script.js # envio do formulário (Formspree) com feedback na mesma página
+├─ partials/header.html
+├─ partials/footer.html
+├─ imagens/ # coloque suas imagens aqui
+├─ index.html
+├─ sobre.html
+├─ galeria.html
+└─ contato.html
 
----
+markdown
+Copiar código
 
-## 🧱 Estrutura do projeto
+## 🚀 Como rodar local
+- Clique duas vezes no `index.html` (o menu aparece por fallback), **ou**
+- Use um servidor local (ex.: Live Server no VS Code / Cursor).
 
-```
-.
-├── index.html                # Página inicial
-├── sobre.html                # Página institucional
-├── galeria.html              # Galeria de fotos
-├── contato.html              # Formulário + mapa
-│
-├── css/
-│   └── style.css             # Estilo principal
-│
-├── js/
-│   └── script.js             # Envio AJAX do formulário
-│
-└── imagens/
-    ├── capa.jpeg
-    ├── exemplo1.jpeg
-    ├── exemplo2.jpeg
-    ├── exemplo3.jpeg
-    └── exemplo4.jpeg
-```
+## 📨 Formulário
+Envio via Formspree. Ao enviar, a página mostra:
+> ✅ Mensagem enviada com sucesso! Em breve retornaremos seu contato.
 
----
+## ♿ Acessibilidade & SEO
+- `aria-current="page"` para link ativo
+- `meta description` por página
+- `alt` descritivo nas imagens
+Commit rápido do README
+No terminal dentro do projeto:
 
-## 📬 Formulário de Contato
-- Integração via **Formspree**  
-- Endpoint configurado: `https://formspree.io/f/xzzkgwkn`  
-- Retorno de sucesso/erro exibido **na mesma página**, sem redirecionamento  
-
-### Exemplo de campos:
-```
-Nome
-Telefone
-Mensagem
-```
-
----
-
-## 🗺️ Localização
-Google Maps incorporado com o endereço da oficina:  
-**Rua Danilo Eduardo Rios Ramos, 510 – Jardim São José I – São José dos Campos/SP**
-
----
-
-## 🎨 Paleta de cores
-- 🔴 **Vermelho**: #E50914  
-- ⚫ **Preto**: #0F0F10  
-- ⚪ **Cinza claro**: #ECECEC  
-- 🌑 **Cinza escuro**: #1E1F22  
-
----
-
-## 🚀 Como publicar no GitHub Pages
-1. Vá em **Settings → Pages**  
-2. Em **Branch**, selecione `main` e `/ (root)`  
-3. Clique em **Save**  
-4. Após alguns minutos, seu site estará online.
-
----
-
-## 💾 Comandos úteis
-```bash
-# Enviar alterações
-git add .
-git commit -m "atualização do site"
+bash
+Copiar código
+git add README.md
+git commit -m "docs: adiciona README com instruções e link do Pages"
 git push
+Dicas finais
+Para cada alteração futura:
 
-# Atualizar repositório remoto
-git pull
-```
-
----
-
-## 👨‍💻 Autor
-**Anderson Souza**  
-GitHub: https://github.com/anderson29-nsconsultoria • Formspree: https://formspree.io  
-
----
-
-© 2025 **Anderson Tech** — Todos os direitos reservados.
+bash
+Copiar código
+git add .
+git commit -m "descrição da mudança"
+git push
