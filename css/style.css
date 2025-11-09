@@ -4,33 +4,71 @@
   --branco: #F5F5F5;
   --vermelho: #E50914;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
-  background:var(--preto);color:var(--branco);line-height:1.6;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: var(--preto);
+  color: var(--branco);
+  line-height: 1.6;
 }
-.hero{width:100%;height:auto;display:block}
-nav{
-  background:var(--cinza);display:flex;justify-content:center;flex-wrap:wrap;gap:2rem;padding:1rem;
+
+.hero { width: 100%; height: auto; display: block; }
+
+/* Menu */
+nav {
+  background: var(--cinza);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem;
 }
-nav a{color:var(--branco);text-decoration:none;font-weight:600;transition:color .3s}
-nav a:hover,nav a.ativo{color:var(--vermelho)}
-#conteudo{max-width:1000px;margin:auto;padding:2rem 1rem;text-align:center}
-h1{color:var(--vermelho);margin-bottom:1rem}
-p{max-width:70ch;margin:.5rem auto}
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .3s;
+}
+nav a:hover, nav a.ativo { color: var(--vermelho); }
+
+/* Conteúdo */
+#conteudo { max-width: 1000px; margin: auto; padding: 2rem 1rem; text-align: center; }
+h1 { color: var(--vermelho); margin-bottom: 1rem; }
+p  { max-width: 70ch; margin: .5rem auto; }
+
 /* Galeria */
-.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:1rem}
-.galeria img{width:100%;height:220px;object-fit:cover;border-radius:4px}
+.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 1rem; }
+.galeria img { width: 100%; height: 220px; object-fit: cover; border-radius: 4px; }
+
 /* Formulário */
-#contatoForm{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:1rem auto;max-width:500px}
-#contatoForm input,#contatoForm textarea{background:var(--cinza);border:1px solid var(--vermelho);color:var(--branco);padding:10px;border-radius:4px}
-#contatoForm input[type='text'],#contatoForm input[type='tel']{flex:1 1 calc(50% - 5px)}
-#contatoForm textarea{flex:1 1 100%;min-height:100px}
-#contatoForm button{background:var(--vermelho);border:none;color:var(--branco);padding:10px;border-radius:4px;width:100%;cursor:pointer;transition:background .3s}
-#contatoForm button:hover{background:#b50810}
-.form-status{text-align:center;margin-top:10px;font-weight:500}
-.form-status.is-success{color:#4CAF50}
-.form-status.is-error{color:#E50914}
-.form-status.is-loading{color:#ffca28}
-#rodape{background:var(--cinza);text-align:center;padding:1rem;font-size:.9rem}
-@media (max-width:768px){h1{font-size:1.6rem}}
+#contatoForm { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 1rem auto; max-width: 500px; }
+#contatoForm input, #contatoForm textarea {
+  background: var(--cinza);
+  border: 1px solid var(--vermelho);
+  color: var(--branco);
+  padding: 10px; border-radius: 4px;
+}
+#contatoForm input[type='text'], #contatoForm input[type='tel'] { flex: 1 1 calc(50% - 5px); }
+#contatoForm textarea { flex: 1 1 100%; min-height: 100px; }
+#contatoForm button { background: var(--vermelho); border: none; color: var(--branco); padding: 10px; border-radius: 4px; width: 100%; cursor: pointer; transition: background .3s; }
+#contatoForm button:hover { background: #b50810; }
+.form-status { text-align: center; margin-top: 10px; font-weight: 500; }
+.form-status.is-success { color: #4CAF50; }
+.form-status.is-error   { color: #E50914; }
+.form-status.is-loading { color: #ffca28; }
+
+/* Footer + sociais */
+#rodape { background: var(--cinza); text-align: center; padding: 1rem; font-size: .9rem; }
+.social { margin-top: 10px; }
+.social a img { width: 28px; margin: 0 8px; filter: brightness(0) invert(1); transition: transform .3s; }
+.social a:hover img { transform: scale(1.2); filter: drop-shadow(0 0 6px var(--vermelho)); }
+
+/* WhatsApp flutuante */
+.whatsapp-fixo { position: fixed; bottom: 20px; right: 20px; z-index: 9999; transition: transform .3s ease; }
+.whatsapp-fixo img { width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,.3); }
+.whatsapp-fixo:hover { transform: scale(1.1); }
+
+/* Responsivo */
+@media (max-width: 768px) { h1 { font-size: 1.6rem; } }

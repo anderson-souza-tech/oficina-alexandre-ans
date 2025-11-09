@@ -10,7 +10,7 @@
       inject(el, await res.text());
     }catch(err){
       console.warn("Falha ao carregar parcial:", path, err.message);
-      // Fallback inline para ambiente file:// (exibição do menu/rodapé)
+      // Fallback inline p/ ambiente file://
       if(path.includes("header.html")){
         inject(el, `<header class="site-header">
   <img class="hero" src="imagens/capa.jpeg" alt="Fachada da ANS Restauração Automotiva">
@@ -20,10 +20,18 @@
     <a href="galeria.html">Galeria de Fotos</a>
     <a href="contato.html">Contato</a>
   </nav>
-</header>`);
+</header>
+<a href="https://wa.me/551239298249?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20ANS%20Restaura%C3%A7%C3%A3o%20Automotiva."
+   class="whatsapp-fixo" target="_blank" aria-label="Abrir conversa no WhatsApp">
+  <img src="imagens/whatsapp.svg" alt="WhatsApp" />
+</a>`);
       } else if(path.includes("footer.html")){
         inject(el, `<footer id="rodape" class="site-footer">
   <p>© 2025 Anderson Tech. Todos os direitos reservados.</p>
+  <div class="social">
+    <a href="https://www.instagram.com/ansrestauracao" target="_blank" aria-label="Instagram"><img src="imagens/instagram.svg" alt="Instagram" /></a>
+    <a href="https://www.facebook.com/ansrestauracao" target="_blank" aria-label="Facebook"><img src="imagens/facebook.svg" alt="Facebook" /></a>
+  </div>
 </footer>`);
       } else {
         inject(el, `<!-- erro ao incluir ${path} -->`);
