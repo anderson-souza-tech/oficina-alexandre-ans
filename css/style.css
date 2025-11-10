@@ -1,163 +1,74 @@
-/* ====< Paleta de cores (tema) ============================================= */
-:root{
-  --preto:        #0F0F10;  /* fundo mais escuro / gradiente inicial            */
-  --cinza-escuro: #1E1F22;  /* fundo secundário / gradiente final                */
-  --cinza:        #2B2D31;  /* áreas internas (ex.: container #principal)        */
-  --cinza-claro:  #ECECEC;  /* textos claros sobre fundo escuro                  */
-  --vermelho:     #E50914;  /* cor de destaque (bordas, links ativos, botões)    */
+:root {
+  --preto: #0F0F10;
+  --cinza: #2B2D31;
+  --branco: #F5F5F5;
+  --vermelho: #E50914;
 }
 
-/* ===== Base tipográfica e plano de fundo ================================== */
-body{
-  margin: 0;
-  font: 16px/1.6 Arial, Helvetica, sans-serif; /* tamanho e altura de linha padrão */
-  color: var(--cinza-claro);                    /* cor de texto padrão              */
-  background: linear-gradient(180deg, var(--preto), var(--cinza-escuro)); /* bg */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: var(--preto);
+  color: var(--branco);
+  line-height: 1.6;
 }
 
-/* ===== Container principal (limite de largura e sombra) ==================== */
-#principal{
-  max-width: 980px;
-  margin: 0 auto;
+.hero { width: 100%; height: auto; display: block; }
+
+/* Menu */
+nav {
   background: var(--cinza);
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
-}
-
-/* ===== Faixa “hero” (imagem topo) ========================================= */
-.hero{
-  display: block;
-  width: 100%;
-  max-height: 380px;                 /* ajuste aqui se quiser hero mais alta/baixa */
-  object-fit: cover;
-  border-bottom: 4px solid var(--vermelho);
-  filter: saturate(1.05) contrast(1.05);
-}
-
-/* ===== Menu principal ====================================================== */
-#menu{
   display: flex;
-  gap: .75rem;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  background: linear-gradient(0deg, var(--preto), #191a1c);
-  border-bottom: 2px solid var(--vermelho);
-  padding: 14px 18px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem;
 }
-#menu a{
-  color: #cfd3d7;
+nav a {
+  color: var(--branco);
   text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: .5px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  transition: transform .15s ease,
-              background-color .15s ease,
-              color .15s ease;
+  font-weight: 600;
+  transition: color .3s;
 }
-#menu a:hover{
-  color: #fff;
-  background: rgba(229,9,20,.12);
-  transform: translateY(-1px);
-}
-#menu a.ativo{
-  color: #fff;
-  background: var(--vermelho); /* link ativo do menu */
-}
+nav a:hover, nav a.ativo { color: var(--vermelho); }
 
-/* ===== Área de conteúdo ==================================================== */
-#conteudo{
-  background: #202226;
-  padding: 22px 22px 28px;
-  border-left: 1px solid #2f3237;
-  border-right: 1px solid #2f3237;
-}
+/* Conteúdo */
+#conteudo { max-width: 1000px; margin: auto; padding: 2rem 1rem; text-align: center; }
+h1 { color: var(--vermelho); margin-bottom: 1rem; }
+p  { max-width: 70ch; margin: .5rem auto; }
 
-/* ===== Títulos e parágrafos =============================================== */
-h1{
-  margin: 6px 0 14px;
-  font-size: 1.45rem;
-  color: #fff;
-  border-left: 6px solid var(--vermelho);
-  padding-left: 10px;
-}
-p{
-  color: #dfe3e7;
-  margin: 0 0 14px;
-}
+/* Galeria */
+.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 1rem; }
+.galeria img { width: 100%; height: 220px; object-fit: cover; border-radius: 4px; }
 
-/* ===== Rodapé ============================================================== */
-#rodape{
-  text-align: center;
-  background: #141517;
-  color: #b8bcc1;
-  padding: 14px 10px 18px;
-  border-top: 2px solid var(--vermelho);
+/* Formulário */
+#contatoForm { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 1rem auto; max-width: 500px; }
+#contatoForm input, #contatoForm textarea {
+  background: var(--cinza);
+  border: 1px solid var(--vermelho);
+  color: var(--branco);
+  padding: 10px; border-radius: 4px;
 }
-#rodape p{
-  margin: 0;
-  font-size: .92rem;
-}
+#contatoForm input[type='text'], #contatoForm input[type='tel'] { flex: 1 1 calc(50% - 5px); }
+#contatoForm textarea { flex: 1 1 100%; min-height: 100px; }
+#contatoForm button { background: var(--vermelho); border: none; color: var(--branco); padding: 10px; border-radius: 4px; width: 100%; cursor: pointer; transition: background .3s; }
+#contatoForm button:hover { background: #b50810; }
+.form-status { text-align: center; margin-top: 10px; font-weight: 500; }
+.form-status.is-success { color: #4CAF50; }
+.form-status.is-error   { color: #E50914; }
+.form-status.is-loading { color: #ffca28; }
 
-/* ===== Imagens padrão da campanha/galeria ================================= */
-/* OBS: altura e disposição lado a lado são controladas pela .galeria (seção da galeria) */
-.img-campanha{
-  display: block;
-  width: 100%;
-  height: auto;                          /* altere aqui se quiser altura fixa */
-  border: 4px solid var(--vermelho);
-  box-shadow: 0 6px 20px rgba(0,0,0,.35);
-  border-radius: 6px;
-}
+/* Footer + sociais */
+#rodape { background: var(--cinza); text-align: center; padding: 1rem; font-size: .9rem; }
+.social { margin-top: 10px; }
+.social a img { width: 28px; margin: 0 8px; filter: brightness(0) invert(1); transition: transform .3s; }
+.social a:hover img { transform: scale(1.2); filter: drop-shadow(0 0 6px var(--vermelho)); }
 
-/* ===== Links dentro do conteúdo =========================================== */
-#conteudo a{
-  color: var(--vermelho);
-  font-weight: 700;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;  /* aparece no :hover */
-}
-#conteudo a:hover{
-  border-bottom: 1px solid var(--vermelho);
-}
+/* WhatsApp flutuante */
+.whatsapp-fixo { position: fixed; bottom: 20px; right: 20px; z-index: 9999; transition: transform .3s ease; }
+.whatsapp-fixo img { width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,.3); }
+.whatsapp-fixo:hover { transform: scale(1.1); }
 
-/* ===== Formulários e botões =============================================== */
-input, textarea, button{
-  width: 100%;
-  max-width: 450px;
-  padding: 10px;
-  margin: 5px 0;
-  border: none;
-  border-radius: 4px;
-}
-button{
-  background: var(--vermelho);           /* cor do botão */
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color .2s;      /* animação suave ao passar o mouse */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-button:hover{
-  background: #ff3344;                   /* cor do botão no hover */
-}
-
-/* ===== [Somente Galeria] – layout lado a lado com quebra automática ======= */
-/* Coloque as imagens .img-campanha dentro de <div class="galeria"> */
-.galeria{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* nº de colunas automático */
-  gap: 14px;                                                   /* espaço entre as imagens   */
-  margin: 16px 0 22px;
-}
-.galeria .img-campanha{
-  height: 220px;     /* altura uniforme dos cards; remova se preferir altura livre */
-  object-fit: cover; /* preenche o card e recorta o excesso de forma elegante      */
-}
-
-
-
-
+/* Responsivo */
+@media (max-width: 768px) { h1 { font-size: 1.6rem; } }
